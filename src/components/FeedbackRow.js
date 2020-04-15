@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import datetime from 'node-datetime';
-import { Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 /**
  * @class FeedbackRow
@@ -25,6 +25,14 @@ class FeedbackRow extends Component {
       </>
     );
   }
+}
+
+FeedbackRow.propTypes = {
+  feedback: PropTypes.shape({
+    createdAt: PropTypes.string,
+    _id: PropTypes.string,
+    feedback: PropTypes.string,
+  })
 }
 
 export default FeedbackRow;

@@ -44,4 +44,8 @@ class FeedbackList extends Component {
   }
 }
 
+FeedbackList.propTypes = {
+  feedbacks: PropTypes.shape({})
+}
+
 export default FeedbackList;

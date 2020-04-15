@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   Form,
   Button,
-  Card
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import isEmpty from 'is-empty';

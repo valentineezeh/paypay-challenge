@@ -52,7 +52,6 @@ class EmployeeList extends Component {
     const {
       employee,
       auth,
-      review
     } = this.props;
     return (
       <div>
@@ -148,6 +147,7 @@ EmployeeList.propTypes = {
   }),
   GetReviews: PropTypes.func,
   reviewPayload: PropTypes.shape({}),
+  auth: PropTypes.bool
 };
 
 const mapStateToProps = state => ({

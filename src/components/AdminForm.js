@@ -164,7 +164,7 @@ class AdminForm extends Component {
               onClick={this.onSubmit}
             >
               {
-            createAdminIsLoading ? (
+            createAdminIsLoading || loginAdminIsLoading ? (
               <>
                 <i className="fa fa-spinner fa-spin" />
                 {'  '}
@@ -179,6 +179,16 @@ class AdminForm extends Component {
     );
   }
 }
+
+AdminForm.propTypes = {
+  type: PropTypes.string,
+  createAdminIsLoading: PropTypes.bool,
+  createAdminSuccess: PropTypes.bool,
+  adminError: PropTypes.string,
+  loginAdminError: PropTypes.string,
+  loginAdminIsLoading: PropTypes.bool,
+  loginAdminSuccess: PropTypes.bool
+};
 
 const mapStateToProps = state => ({
   createAdminIsLoading: state.postAdmin.createAdminIsLoading,

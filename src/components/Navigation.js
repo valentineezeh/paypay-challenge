@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 /**
  * @class Navigation
@@ -16,7 +17,7 @@ class Navigation extends Component {
       <>
         <nav className="main_side_nav">
           <span className="open_slide">
-            <a id="side_menu_button" href="" onClick="openSideMenu()">
+            <a id="side_menu_button" href="?#" onClick="openSideMenu()">
               <svg width="30" height="30">
                 <path d="M0,5 30,5" stroke="#286a8e" strokeWidth="5" />
                 <path d="M0,14 30,14" stroke="#286a8e" strokeWidth="5" />
@@ -67,6 +68,10 @@ class Navigation extends Component {
     );
   }
 }
+
+Navigation.propTypes = {
+  auth: PropTypes.bool
+};
 
 const mapStateToProps = state => ({
   auth: state.loginAdmin.isAuthenticated,
