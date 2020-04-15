@@ -1,0 +1,43 @@
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+  .side_nav {
+    display: none !important;     
+}
+.dashboard_body {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.main_side_nav {
+  display: block;
+  margin: 10px 10px;
+}
+
+.top_header {
+  height: 100%;
+}
+
+.row_content {
+  height: 200px;
+}
+
+.store_text {
+  margin-bottom: 20px;
+}
+
+.wallet_text {
+  margin-top: 40px;
+}
+
+table, thead, tbody, th, td, tr { 
+  display: block; 
+}
+thead tr {
+  top: -9999px;
+  left: -9999px;
+}
+tr { border: 1px solid #ccc; }
+}
+
+
